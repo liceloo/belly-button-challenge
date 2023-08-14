@@ -90,10 +90,9 @@ function bubble(sample_data){
 // Display each key-value pair from the metadata JSON object somewhere on the page.
 
 function showMetaData(mdata_data){
-  demoInfo = d3.select('#sample-metadata')
+  d3.select('#sample-metadata').html("")
   Object.entries(mdata_data).forEach(function([k, v]){
-    d3.select('#sample-metadata').append('p').text(`${k}: ${v}`)
+    d3.select('#sample-metadata').insert('p').text(`${k}: ${v}`)
   })
   
 };
-
